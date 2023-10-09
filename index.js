@@ -32,13 +32,13 @@ function updateScroll() {
     var element = document.getElementById("chat");
     element.scrollTop = element.scrollHeight;
 }
-  setInterval(updateScroll, 100); // Update every 100 ms (almost unnoticed)
 
 function addMessage(message, className) {
     let newMessage = document.createElement("p");
     newMessage.classList.add(className);
     newMessage.textContent = message;
     divChat.appendChild(newMessage);
+    updateScroll();
 }
 
 function displayMessage_01() {
@@ -57,6 +57,7 @@ btn_01_01.addEventListener("click", function () {
     divReponse_01.style.display = "none";
     addMessage(btn_01_01.value, "msg-me");
     startPhase02();
+    updateScroll();
 });
 
 btn_01_02.addEventListener("click", function () {
@@ -64,6 +65,7 @@ btn_01_02.addEventListener("click", function () {
     divReponse_01.style.display = "none";
     addMessage(btn_01_02.value, "msg-me");
     startPhase02();
+    updateScroll();
 });
 
 function startPhase02() {
@@ -88,10 +90,12 @@ btn_02_01.addEventListener("click", function () {
     phase03Start = true;
     // divReponse_02.style.display = "none";
     addMessage(btn_02_01.value, "msg-me");
+    updateScroll();
 });
 
 btn_02_02.addEventListener("click", function () {
     phase03Start = true;
     // divReponse_02.style.display = "none";
     addMessage(btn_02_02.value, "msg-me");
+    updateScroll();
 });
