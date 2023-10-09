@@ -37,7 +37,8 @@
     background-color: cornflowerblue;
     padding: 10px 20px;
     max-width: 60%;
-    margin-right: 40%;
+    margin-left: 10%;
+    margin-right: auto;
     margin-bottom: 2%;
 }
 
@@ -46,7 +47,8 @@
     background-color:goldenrod;
     padding: 10px 20px;
     max-width: 60%;
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: 10%;
     margin-bottom: 2%;
 }
 
